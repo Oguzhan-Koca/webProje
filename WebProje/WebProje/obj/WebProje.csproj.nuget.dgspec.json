@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Oğuzhan Koca\\Desktop\\webProje\\WebProje\\WebProje\\WebProje.csproj": {}
+    "C:\\Users\\Oğuzhan Koca\\Desktop\\webprojeGithub\\WebProje\\WebProje\\WebProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Oğuzhan Koca\\Desktop\\webProje\\WebProje\\WebProje\\WebProje.csproj": {
+    "C:\\Users\\Oğuzhan Koca\\Desktop\\webprojeGithub\\WebProje\\WebProje\\WebProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Oğuzhan Koca\\Desktop\\webProje\\WebProje\\WebProje\\WebProje.csproj",
+        "projectUniqueName": "C:\\Users\\Oğuzhan Koca\\Desktop\\webprojeGithub\\WebProje\\WebProje\\WebProje.csproj",
         "projectName": "WebProje",
-        "projectPath": "C:\\Users\\Oğuzhan Koca\\Desktop\\webProje\\WebProje\\WebProje\\WebProje.csproj",
+        "projectPath": "C:\\Users\\Oğuzhan Koca\\Desktop\\webprojeGithub\\WebProje\\WebProje\\WebProje.csproj",
         "packagesPath": "C:\\Users\\Oğuzhan Koca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Oğuzhan Koca\\Desktop\\webProje\\WebProje\\WebProje\\obj\\",
+        "outputPath": "C:\\Users\\Oğuzhan Koca\\Desktop\\webprojeGithub\\WebProje\\WebProje\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.AspNet.Mvc": {
               "target": "Package",
               "version": "[5.2.9, )"
@@ -52,11 +56,37 @@
               "target": "Package",
               "version": "[3.2.9, )"
             },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.CodeDom.Providers.DotNetCompilerPlatform": {
               "target": "Package",
               "version": "[3.6.0, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
+            "Microsoft.Extensions.Caching.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.12, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.11, )"
             },
