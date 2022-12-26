@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using WebProje.Entities;
+using WebProje.Models.Entities;
 namespace WebProje
 {
     public class Program
@@ -21,7 +21,7 @@ namespace WebProje
 
             if (!app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Admin/Error");
+                app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
 
@@ -34,7 +34,7 @@ namespace WebProje
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Admin}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
 

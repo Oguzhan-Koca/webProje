@@ -1,0 +1,76 @@
+﻿@model List<Hakkimizda>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+
+<html>
+<head>
+    <title></title>
+    <!-- Favicons -->
+    <link href="~/AdminLayout/assets/img/favicon.png" rel="icon">
+    <link href="~/AdminLayout/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="~/AdminLayout/https://fonts.gstatic.com" rel="preconnect">
+    <link href="~/AdminLayout/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/AdminLayout/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/AdminLayout/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/AdminLayout/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/AdminLayout/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="~/AdminLayout/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="~/AdminLayout/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/AdminLayout/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/AdminLayout/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-2">
+        <div class="bg-dark text-white-50 text-center my-2 p-3">
+            Ürünler
+        </div>
+        <div class="text-right pr-2 my-2">
+            <a asp-action="Ekle" asp-controller="Home" class="btn btn-primary btn-sm">Ekle</a>
+        </div>
+        <table class="table table-hover table-striped table-bordered table-sm p-3">
+            <thead>
+                <tr>
+                    <th>HakkimizdaId</th>
+                  
+                    <th>Aciklama</th>
+                   
+                </tr>
+
+            </thead>
+            @foreach (var hakkimizda in Model)
+            {
+                <tr>
+                    <td>@hakkimizda.HakkimizdaId </td>
+
+                    <td>@hakkimizda.Aciklama </td>
+
+                    <td>
+                        <a asp-action="Guncelle" asp-controller="Home" asp-route-id="@hakkimizda.HakkimizdaId" class="btn btn-warning btn-sm">Güncelle</a>
+                        <a onclick="return confirm(' Silmek istediğinizden emin misiniz?')" asp-action="Sil" asp-controller="Home" asp-route-id="@hakkimizda.HakkimizdaId" class="btn btn-danger btn-sm">Sil</a>
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</body>
+</html>
+
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
