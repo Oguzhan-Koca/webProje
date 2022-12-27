@@ -17,36 +17,37 @@ namespace Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetUrun()
+        public IActionResult GetAdmin()
         {
-            return Ok(_context.Urun.ToList());
+            return Ok(_context.Admin.ToList());
         }
+
        
-        [HttpPut("{id}")]
-        public IActionResult UpdateUrun(int id,Urun urun)
-        {
-            var updateUrun=_context.Urun.FirstOrDefault(I=>I.UrunId==id);
-            updateUrun.Baslik = urun.Baslik;
-            _context.SaveChanges();
-                return NoContent(); 
-        }
+//        [HttpPut("{id}")]
+//        public IActionResult UpdateAdmin(int id, Admin admin)
+//        {
+//            var updateUrun=_context.Admin.FirstOrDefault(I=>I.AdminId == id);
+//            updateUrun.Baslik = admin.Baslik;
+//            _context.SaveChanges();
+//                return NoContent(); 
+//        }
 
-        [HttpDelete("{id}")]
-        public IActionResult DeleteUrun(int id)
-        {
-            var deletedUrun = _context.Urun.FirstOrDefault(I => I.UrunId == id);
+//        [HttpDelete("{id}")]
+//        public IActionResult DeleteAdmin(int id)
+//        {
+//            var deletedUrun = _context.Urun.FirstOrDefault(I => I.AdminId == id);
 
-            _context.Remove(deletedUrun);
-            _context.SaveChanges();
-            return NoContent();
-        }
+//            _context.Remove(deletedUrun);
+//            _context.SaveChanges();
+//            return NoContent();
+//        }
 
-        [HttpPost]
-        public IActionResult AddUrun(Urun urun) {
+//        [HttpPost]
+//        public IActionResult AddAdmin(Admin urun) {
         
-            _context.Add(urun);
-            _context.SaveChanges();
-            return Created("", urun);
-        }
+//            _context.Add(urun);
+//            _context.SaveChanges();
+//            return Created("", urun);
+//        }
     }
 }

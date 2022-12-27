@@ -31,43 +31,13 @@
     <link href="~/AdminLayout/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container mt-2">
-        <div class="bg-dark text-white-50 text-center my-2 p-3">
-            Hakkimizda
-        </div>
-        <div class="text-right pr-2 my-2">
-            <a asp-action="Ekle" asp-controller="Home" class="btn btn-primary btn-sm">Ekle</a>
-        </div>
-        <table class="table table-hover table-striped table-bordered table-sm p-3">
-            <thead>
-                <tr>
-                    <th>UrunId</th>
-                    <th>Baslik</th>
-                    <th>Aciklama</th>
-                    <th>ResimURL</th>
-                    <th>İşlem</th>
-                </tr>
-
-            </thead>
-            @foreach (var urun in Model)
-            {
-                <tr>
-                    <td>@urun.UrunId </td>
-                    <td>@urun.Baslik </td>
-                    <td>@urun.Aciklama </td>
-                    <td>
-                        <img src="@urun.ResimURL" width="100" height="65" />
-                    </td>
-                    <td>
-                        <a asp-action="Guncelle" asp-controller="Home" asp-route-id="@urun.UrunId" class="btn btn-warning btn-sm">Güncelle</a>
-                        <a onclick="return confirm(' Silmek istediğinizden emin misiniz?')" asp-action="Sil" asp-controller="Home" asp-route-id="@urun.UrunId" class="btn btn-danger btn-sm">Sil</a>
-                    </td>
-
-                </tr>
-            }
-
-        </table>
+    <div>
+  
+        <h1>Oğuzhan koca</h1>
+       
+    
     </div>
+   
 
 </body>
 </html>

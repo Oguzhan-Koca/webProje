@@ -11,7 +11,7 @@ namespace WebProje.Entities
         public int HakkimizdaId { get; set; }
         [Required]
         [DisplayName("Hakkımızda Açıklama")]
-        public string Aciklama { get; set; }
+        public string Aciklama {   get; set; }
 
     }
 }

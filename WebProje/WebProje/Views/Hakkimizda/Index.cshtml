@@ -1,5 +1,4 @@
 ﻿@model List<Hakkimizda>
-
 @{
     ViewData["Title"] = "Index";
     Layout = null;
@@ -34,7 +33,7 @@
             Ürünler
         </div>
         <div class="text-right pr-2 my-2">
-            <a asp-action="Ekle" asp-controller="Home" class="btn btn-primary btn-sm">Ekle</a>
+            <a asp-action="Ekle" asp-controller="Hakkimizda" class="btn btn-primary btn-sm">Ekle</a>
         </div>
         <table class="table table-hover table-striped table-bordered table-sm p-3">
             <thead>
@@ -54,8 +53,8 @@
                     <td>@hakkimizda.Aciklama </td>
 
                     <td>
-                        <a asp-action="Guncelle" asp-controller="Home" asp-route-id="@hakkimizda.HakkimizdaId" class="btn btn-warning btn-sm">Güncelle</a>
-                        <a onclick="return confirm(' Silmek istediğinizden emin misiniz?')" asp-action="Sil" asp-controller="Home" asp-route-id="@hakkimizda.HakkimizdaId" class="btn btn-danger btn-sm">Sil</a>
+                        <a asp-action="Guncelle" asp-controller="Hakkimizda" asp-route-id="@hakkimizda.HakkimizdaId" class="btn btn-warning btn-sm">Güncelle</a>
+                        <a onclick="return confirm(' Silmek istediğinizden emin misiniz?')" asp-action="Sil" asp-controller="Hakkimizda" asp-route-id="@hakkimizda.HakkimizdaId" class="btn btn-danger btn-sm">Sil</a>
                     </td>
 
                 </tr>

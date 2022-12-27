@@ -9,7 +9,7 @@ namespace WebProje
             var builder = WebApplication.CreateBuilder(args);
 
            
-            builder.Services.AddDbContext<WebProjeDbContext>(opts =>
+            builder.Services.AddDbContext<YeniDbContext>(opts =>
             {
 
                 opts.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
