@@ -3,7 +3,7 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 
@@ -21,7 +21,11 @@
 				<tr>
 					<td>@item.CategoryID</td>
 					<td>@item.CategoryName</td>
+					<td>
+						@Html.ActionLink("Güncelle","Edit",new{id=item.Animals})
+					</td>
 				</tr>
+				
 			}
 		</table>
 	</ul>

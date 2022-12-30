@@ -36,8 +36,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Oğuzhan Koca/Desktop/sonprojeweb/MvcProje-master/MvcProje-master/MvcProje/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Oğuzhan Koca/Desktop/sonprojeweb/MvcProje-master/MvcProje-master/MvcProje/Views/Animal/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Oğuzhan Koca/Desktop/sonprojeweb/MvcProje-master/MvcProje-master/MvcProje/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Oğuzhan Koca/Desktop/sonprojeweb/MvcProje-master/MvcProje-master/MvcProje/Views/Category/Index.cshtml]
@@ -46,14 +54,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Oğuzhan Koca/Desktop/sonprojeweb/MvcProje-master/MvcProje-master/MvcProje/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Oğuzhan Koca/Desktop/sonprojeweb/MvcProje-master/MvcProje-master/MvcProje/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Oğuzhan Koca/Desktop/sonprojeweb/MvcProje-master/MvcProje-master/MvcProje/Views/Login/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Oğuzhan Koca/Desktop/sonprojeweb/MvcProje-master/MvcProje-master/MvcProje/Views/Register/AddRegister.cshtml]

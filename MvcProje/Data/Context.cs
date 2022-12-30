@@ -16,6 +16,7 @@ namespace MvcProje.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Admin> Admin { get; set; }
         public DbSet<ImageFile> ImageFiles { get; set; }
 
     }

@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+
+<
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Admin Girişi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/login-form-20/css/style.css">
+</head>
+<body class="img js-fullheight" style="background-image: url(/login-form-20/images/bg.jpg);">
+    <form class="login-form" method="post" action="/Admin/Index/">
+        <section class="ftco-section">
+            <div class="login-wrap" action="/Animal/Login/">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h2 class="heading-section">ADMİN GİRİŞİ</h2>
+                    </div>
+                </div>
+                <p class="alert-danger">@ViewBag.Uyari</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="login-wrap p-0">
+                            <form method="post" class="signin-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="Email" placeholder="E Posta" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="password-field" type="password" name="Password" placeholder="Şifreniz" required>
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                                <div class="form-group">
+                                    <button class="form-control btn btn-primary submit px-3" type="submit" >GİRİŞ YAP></button>
+                                </div>
+                            </form>
+                            <button class="form-control btn btn-secondary submit px-3">
+
+                                <span class="menu-title"><a href="/Home/Index/">SİTEYE GİT </a></span>
+                              
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </form>
+   
+    <script src="/login-form-20/js/jquery.min.js"></script>
+    <script src="/login-form-20/js/popper.js"></script>
+    <script src="/login-form-20/js/bootstrap.min.js"></script>
+    <script src="/login-form-20/js/main.js"></script>
+</body>
+</html>

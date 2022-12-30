@@ -1,7 +1,13 @@
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(10);
+});
+
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
@@ -15,6 +21,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
 
 app.UseRouting();
 

@@ -8,7 +8,7 @@ namespace MvcProje.Models.Entity
 
         public string CategoryName { get; set; }
 
-        public bool CategoryStatus { get; set; }
+       
 
         public List<Animal> Animals { get; set; }
 
