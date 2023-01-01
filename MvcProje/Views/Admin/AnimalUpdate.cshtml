@@ -9,14 +9,21 @@
 <h3> Hayvan Güncelleme Sayfası</h3>
 <br />
 
-<form>
-   @Html.Label("Hayvan Adı")
-   @Html.TextBoxFor(x=> x.AnimalName, new{@class="form-control"})
-   @*//form-control responsive*@
+<form method="post" asp-controller="Admin" asp-action="AnimalUpdate" >
+    
     @Html.Label("Hayvan Yaşı")
-    @Html.TextBoxFor(x=> x.AnimalAge, new{@class="form-control"})
-    <button class="btn btn-info">Güncelleme</button>
+    <input type="text" asp-for="AnimalAge" class="form-control"/>
+   @* @Html.TextBoxFor(x=> x.AnimalAge, new{@class="form-control"})*@
+   @Html.Label("Açıklama")
+    <input type="text" asp-for="AnimalDescription" class="form-control" />
+ @*   @Html.TextBoxFor(x=> x.AnimalDescription, new{@class="form-control"})*@
+   @*//form-control responsive*@
+   <input type="hidden" asp-for="AnimalID"/>
+    
+    <button type="submit" class="btn btn-info" value="AnimalUpdate">Güncelleme</button>
 </form>
-
+<div>
+    @Html.ActionLink("Geri Dön","Index")
+</div>
 
 

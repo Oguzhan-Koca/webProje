@@ -13,7 +13,9 @@
         <th>ID</th>
         <th>Hayvan Adı</th>
         <th>Hayvan Özellikleri</th>
-        <th>SİL</th>
+        <th>Hayvan Yaş</th>
+        <th>Hayvan Fotoğraf/th>
+        <th>İŞLEM</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -21,10 +23,13 @@
             <td>@item.AnimalID</td>
             <td>@item.AnimalName</td>
             <td>@item.AnimalDescription</td>
+            <td>@item.AnimalAge</td>
+            <td>@item.AnimalImage</td>
             <td>
-                <a class="btn btn-danger btn-sm" href="/Admin/AnimalDelete/@item.AnimalID">
-                    <i class="fas fa-trash"></i>Sil
-                </a>
+                @Html.ActionLink("Güncelle","AnimalUpdate",new{id=item.AnimalID})
+                
+
+
             </td>
         </tr>
     }

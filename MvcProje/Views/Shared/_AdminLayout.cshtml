@@ -1,7 +1,6 @@
 ﻿
-@{
-    Layout = null;
-}
+@using Microsoft.AspNetCore.Http
+
 
 
 <!DOCTYPE html>
@@ -33,9 +32,20 @@
                         </a>
                     </li>
                     <li class="nav-item nav-settings d-none d-lg-block">
-                        <span class="username"></span>
-                        
-                            <i class="mdi mdi-format-line-spacing"></i>
+                        <span class="></span>
+
+                        <i class="dropdown mdi mdi-format-line-spacing">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><button class="dropdown-item" type="button">Action</button></li>
+                                    <li><button class="dropdown-item" type="button">Another action</button></li>
+                                    <li><button class="dropdown-item" type="button">Something else here</button></li>
+                                </ul>
+                            </div>
+                        </i>
                         </>
                     </li>
                 </ul>

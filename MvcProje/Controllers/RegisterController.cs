@@ -18,7 +18,8 @@ namespace MvcProje.Controllers
         {
             p.UserStatus = true;
             p.UserImage = "-";
-            repository.TAdd(p);
+           // repository.
+           // repository.TAdd(p);
             return RedirectToAction("Index","Login"); 
         }
     }

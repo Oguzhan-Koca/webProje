@@ -1,13 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MvcProje.Data;
 using MvcProje.Models.Entity;
+using MvcProje.Repositories;
 using NuGet.Protocol.Core.Types;
+using NuGet.Protocol.Plugins;
 
 namespace MvcProje.Controllers
 {
     public class UserController : Controller
     {
         Context db = new Context();
+        GenericRepository<User> repository= new GenericRepository<User>();  
 
 
         public IActionResult Index()
@@ -23,16 +26,34 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult Login(User user)
         {
-            var login = db.Users.Where(x => x.UserMail == user.UserMail).SingleOrDefault();
-            if (login.UserMail == user.UserMail && login.Password == user.Password)
+            bool adminVarMi = false;
+            string password = "";
+            foreach (var userr in repository.List())
             {
-
-                HttpContext.Session.SetInt32("UserId", login.UserID);
-                HttpContext.Session.SetString("UserEmail", login.UserMail);
-                return RedirectToAction("Index", "User");
+                if (userr.UserMail == user.UserMail)
+                {
+                    adminVarMi = true;
+                    password = userr.Password;
+                    break;
+                }
             }
-            ViewBag.Uyari = "Kullanici adi veya sifre hatalidir";
-            return View(user);
+            if (adminVarMi)
+            {
+                if (user.Password == password)
+                {
+                    HttpContext.Session.SetInt32("Id", user.UserID);
+                    HttpContext.Session.SetString("Email", user.UserMail);
+
+                    return RedirectToAction("Index", "Home");
+                }
+                ViewBag.Uyari = "sifre hatali";
+                return View(user);
+            }
+            else
+            {
+                ViewBag.Uyari = "Kullanici adi veya sifre Yanlış";
+                return View(user);
+            }
         }
 
         [HttpGet]
@@ -43,7 +64,7 @@ namespace MvcProje.Controllers
         [HttpPost]
         public IActionResult AnimalAdd(Animal animal)
         {
-            animal.AnimalStatus = true;
+            
             animal.UserID = 15;
           //  repositllory.TAdd(animal);
             return RedirectToAction("Index"); //admin controller daki index metoduna gönderme yani yukarı
@@ -64,7 +85,7 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult RemoveAnimal(Animal animal)
         {
-            animal.AnimalStatus = false;
+            
            // repository.TDelete(animal);
             return RedirectToAction("Index");
         }
